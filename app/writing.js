@@ -5,9 +5,9 @@ module.exports = function writing() {
     this.templatePath( 'readme.md' ),
     this.destinationPath( './readme.md' ),
     {
-      description: this.package_json.description,
-      github_user: this.user.git.name(),
-      project: this.package_json.name
+      description: this.prompt_answers.description,
+      github_user: this.prompt_answers.github_user,
+      project: this.prompt_answers.project
     }
   );
 };
