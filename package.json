@@ -1,0 +1,26 @@
+{
+  "name": "generator-readme",
+  "version": "0.0.0",
+  "description": "yeoman generator that creates a readme.md file in the target project",
+  "author": "dan entous",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-nl/generator-readme.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "readme.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/dan-nl/generator-readme/issues"
+  },
+  "homepage": "https://github.com/dan-nl/generator-readme#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "yeoman-generator": "0.24.1"
+  }
+}
