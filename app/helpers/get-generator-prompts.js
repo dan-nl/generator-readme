@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * @param {generator.Base} generator
+ * @param {Object} generator
  *
  * @returns {Array}
  */
-function getModulePrompts( generator ) {
+function getGeneratorPrompts( generator ) {
   return [
     {
       type: 'input',
@@ -29,4 +29,4 @@ function getModulePrompts( generator ) {
   ];
 }
 
-module.exports = getModulePrompts;
+module.exports = getGeneratorPrompts;

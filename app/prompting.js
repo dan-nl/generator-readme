@@ -3,14 +3,14 @@
 /**
  * module dependencies
  */
-var getModulePrompts = require( './helpers/get-module-prompts' );
+var getGeneratorPrompts = require( './helpers/get-generator-prompts' );
 var promptingHelper = require( 'yeoman-prompting-helpers' ).promptingHelper;
 
 /**
  * @return {Promise}
  */
 function prompting() {
-  return promptingHelper( this, getModulePrompts );
+  return promptingHelper( this, getGeneratorPrompts );
 }
 
 module.exports = prompting;
