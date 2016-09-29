@@ -23,6 +23,7 @@ function getModulePrompts( generator ) {
       type: 'input',
       name: 'github_user',
       message: 'github user',
+      store: true,
       default: generator.user.git.name()
     }
   ];
