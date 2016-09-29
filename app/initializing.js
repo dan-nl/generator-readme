@@ -1,35 +1,15 @@
 'use strict';
 
 /**
- * @param {generators.Base} Base
- * @returns {void}
+ * module dependencies
  */
-function addPromptAnswersToBase( Base ) {
-  if ( Base.prompt_answers instanceof Object ) {
-    return;
-  }
-
-  Base.prompt_answers = {};
-}
-
-function addPackageJsonToBase( Base ) {
-  if ( Base.package_json instanceof Object ) {
-    return;
-  }
-
-  Base.package_json = Base.fs.readJSON( './package.json' );
-
-  if ( !Base.package_json ) {
-    Base.package_json = {};
-  }
-}
+var initializingHelper = require( 'yeoman-helpers' ).initializingHelper;
 
 /**
  * @returns {void}
  */
 function initializing() {
-  addPackageJsonToBase( this );
-  addPromptAnswersToBase( this );
+  initializingHelper( this );
 }
 
 module.exports = initializing;
