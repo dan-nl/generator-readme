@@ -12,7 +12,7 @@ var createPromptAnswers = require( 'yeoman-prompting-helpers' ).createPromptAnsw
  */
 function initializing() {
   this.package_json = this.package_json || this.fs.readJSON( './package.json' ) || '{}';
-  this.options.PromptAnswers = createPromptAnswers( this.options.PromptAnswers );
+  this.options.PromptAnswers = this.options.PromptAnswers || new PromptAnswers();
 }
 
 module.exports = initializing;
