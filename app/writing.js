@@ -1,16 +1,18 @@
+/* eslint no-invalid-this: off */
+
 'use strict';
 
 /**
- * @returns {void}
+ * @returns {undefined}
  */
 function writing() {
   this.fs.copyTpl(
     this.templatePath( 'readme.md' ),
     this.destinationPath( './readme.md' ),
     {
-      description: this.options.prompts.get( 'description' ),
-      github_user: this.options.prompts.get( 'github_user' ),
-      project: this.options.prompts.get( 'project' )
+      description: this.options.PromptAnswers.get( 'description' ),
+      github_user: this.options.PromptAnswers.get( 'github_user' ),
+      project: this.options.PromptAnswers.get( 'project' )
     }
   );
 }

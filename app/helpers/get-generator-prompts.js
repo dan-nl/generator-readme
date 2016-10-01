@@ -2,29 +2,28 @@
 
 /**
  * @param {Object} generator
- *
  * @returns {Array}
  */
 function getGeneratorPrompts( generator ) {
   return [
     {
-      type: 'input',
-      name: 'project',
+      default: generator.package_json.name,
       message: 'project',
-      default: generator.package_json.name
+      name: 'project',
+      type: 'input'
     },
     {
-      type: 'input',
-      name: 'description',
+      default: generator.package_json.description,
       message: 'description',
-      default: generator.package_json.description
+      name: 'description',
+      type: 'input'
     },
     {
-      type: 'input',
-      name: 'github_user',
+      default: generator.user.git.name(),
       message: 'github user',
+      name: 'github_user',
       store: true,
-      default: generator.user.git.name()
+      type: 'input'
     }
   ];
 }
