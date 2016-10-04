@@ -6,6 +6,10 @@
  * @returns {undefined}
  */
 function writing() {
+  if ( !this.options.PromptAnswers.get( 'continue-readme' ) ) {
+    return;
+  }
+
   this.fs.copyTpl(
     this.templatePath( 'readme.md' ),
     this.destinationPath( './readme.md' ),
