@@ -6,7 +6,7 @@
  * @returns {undefined}
  */
 function writing() {
-  if ( !this.options.PromptAnswers.get( 'continue-readme' ) ) {
+  if ( !this.options.PromptAnswers.get( 'create-readme' ) ) {
     return;
   }
 
